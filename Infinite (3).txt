@@ -3571,7 +3571,7 @@ end
 end
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
-  TweenSpeed = 340
+  TweenSpeed = 350
    function Tween(P1)
     local Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
     if Distance >= 1 then
@@ -4168,6 +4168,13 @@ end)
         end
         end
         end)
+
+
+local ToggleRandomBone = Tabs.Main:AddToggle("ToggleRandomBone", {Title = "Random Bone",Description = "สุ่มโบน", Default = false })
+ToggleRandomBone:OnChanged(function(Value)  
+		_G.SpinPos = Value
+end)
+Options.ToggleRandomBone:SetValue(false)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------
